@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sign In — Pixous Technologies</title>
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+<style>
+.auth-page{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;background:#fff}
+.auth-side{position:relative;background:linear-gradient(135deg,var(--pix-navy) 0%,var(--pix-green) 100%);padding:60px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.auth-side::before{content:'';position:absolute;top:-60px;right:-60px;width:340px;height:340px;background-image:radial-gradient(circle,#fff 1.5px,transparent 2px);background-size:20px 20px;opacity:.18;border-radius:50%}
+.auth-side::after{content:'';position:absolute;bottom:-80px;left:-80px;width:260px;height:260px;background-image:radial-gradient(circle,var(--pix-green-3) 2.5px,transparent 3px);background-size:22px 22px;opacity:.4;border-radius:50%}
+.auth-side .brand{position:relative;z-index:2}
+.auth-side .brand img{background:#fff;padding:6px;border-radius:8px;height:46px}
+.auth-side .brand-text .b1{color:#fff}
+.auth-side .brand-text .b2{color:var(--pix-green-3)}
+.auth-side-content{position:relative;z-index:2;max-width:440px}
+.auth-side-content h2{font-family:var(--font-brand);font-weight:800;font-size:42px;line-height:1.1;letter-spacing:-1px;margin-bottom:18px}
+.auth-side-content p{font-size:17px;opacity:.92;line-height:1.7}
+.auth-side-bullets{margin-top:30px;display:flex;flex-direction:column;gap:14px;position:relative;z-index:2}
+.auth-side-bullets div{display:flex;align-items:center;gap:12px;font-size:15px}
+.auth-side-bullets svg{width:24px;height:24px;color:var(--pix-green-3);flex-shrink:0}
+.auth-form{padding:60px 60px;display:flex;flex-direction:column;justify-content:center;max-width:520px;margin:0 auto;width:100%}
+.auth-form-header{margin-bottom:40px}
+.auth-tabs{display:flex;gap:6px;margin-bottom:30px;background:var(--pix-grey-1);padding:5px;border-radius:10px}
+.auth-tab{flex:1;padding:10px 16px;border-radius:7px;font-family:var(--font-brand);font-weight:600;font-size:13px;color:var(--pix-grey-3);text-align:center;transition:all .25s;cursor:pointer}
+.auth-tab.active{background:#fff;color:var(--pix-navy);box-shadow:0 2px 8px rgba(14,42,71,.06)}
+.auth-form h1{font-family:var(--font-brand);font-weight:800;font-size:36px;color:var(--pix-navy);letter-spacing:-.5px;margin-bottom:8px}
+.auth-form .subtitle{color:var(--pix-grey-3);font-size:15px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:var(--font-brand);font-weight:600;font-size:13px;color:var(--pix-navy);margin-bottom:7px;letter-spacing:.3px}
+.form-group input{width:100%;padding:14px 18px;border:1.5px solid var(--pix-grey-1);border-radius:var(--radius-sm);font-family:inherit;font-size:14.5px;outline:none;transition:all .2s;background:var(--pix-cream)}
+.form-group input:focus{border-color:var(--pix-green);background:#fff;box-shadow:0 0 0 3px rgba(46,125,79,.1)}
+.form-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;font-size:13.5px}
+.form-row label{display:flex;align-items:center;gap:7px;cursor:pointer;color:var(--pix-grey-3)}
+.form-row a{color:var(--pix-green);font-weight:600}
+.form-row a:hover{text-decoration:underline}
+.btn-fullwidth{width:100%;justify-content:center;padding:14px}
+.divider{display:flex;align-items:center;gap:12px;margin:26px 0;color:var(--pix-grey-3);font-size:12px;font-weight:500}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--pix-grey-1)}
+.social-buttons{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:26px}
+.social-btn{padding:11px 16px;border:1.5px solid var(--pix-grey-1);border-radius:var(--radius-sm);font-family:var(--font-brand);font-weight:600;font-size:13px;color:var(--pix-navy);display:flex;align-items:center;justify-content:center;gap:8px;cursor:pointer;transition:all .2s;background:#fff}
+.social-btn:hover{border-color:var(--pix-green);background:var(--pix-green-soft)}
+.signup-link{text-align:center;font-size:14px;color:var(--pix-grey-3);margin-top:8px}
+.signup-link a{color:var(--pix-green);font-weight:700}
+.back-home{position:absolute;top:24px;right:24px;display:flex;align-items:center;gap:6px;font-family:var(--font-brand);font-weight:600;font-size:13px;color:var(--pix-grey-3);padding:8px 14px;border-radius:6px;transition:all .2s}
+.back-home:hover{background:var(--pix-grey-1);color:var(--pix-navy)}
+.alert{padding:12px 16px;border-radius:var(--radius-sm);font-size:13px;margin-bottom:16px}
+.alert-success{background:var(--pix-green-soft);color:var(--pix-green);border:1px solid rgba(46,125,79,.2)}
+.alert-error{background:#fef0f0;color:#cf3a3a;border:1px solid #fbd5d5}
+@media (max-width:980px){.auth-page{grid-template-columns:1fr}.auth-side{display:none}.auth-form{padding:60px 30px}}
+</style>
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-side">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Pixous">
+      <div class="brand-text"><span class="b1">PIXOUS</span><span class="b2">TECHNOLOGIES</span></div>
+    </a>
+    <div class="auth-side-content">
+      <h2>Welcome to your business growth partner</h2>
+      <p>Sign in to access your project dashboards, support tickets, invoices, and dedicated client resources.</p>
+      <div class="auth-side-bullets">
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time project status & updates</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Direct messaging with your delivery team</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Secure file sharing & document access</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>24/7 support ticket portal</span></div>
+      </div>
+    </div>
+    <div style="position:relative;z-index:2;font-size:13px;opacity:.7">© 2026 Pixous Technologies</div>
+  </div>
+
+  <div class="auth-form">
+    <a href="index.html" class="back-home">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to home
+    </a>
+
+    <div class="auth-form-header">
+      <div class="auth-tabs">
+        <a href="login.html" class="auth-tab active">Customer</a>
+        <a href="employee-login.html" class="auth-tab">Employee</a>
+        <a href="admin/login.html" class="auth-tab">Admin</a>
+      </div>
+      <h1 data-i18n="login.welcome">Welcome Back</h1>
+      <p class="subtitle" data-i18n="login.subtitle">Sign in to your customer account</p>
+    </div>
+
+    <div id="alert"></div>
+    <form id="loginForm" onsubmit="return submitLogin(event)">
+      <div class="form-group">
+        <label data-i18n="login.email">Email Address</label>
+        <input type="email" name="email" placeholder="you@company.com" required>
+      </div>
+      <div class="form-group">
+        <label data-i18n="login.password">Password</label>
+        <input type="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <div class="form-row">
+        <label><input type="checkbox" name="remember"> <span data-i18n="login.remember">Remember me</span></label>
+        <a href="#" data-i18n="login.forgot">Forgot password?</a>
+      </div>
+      <button type="submit" class="btn btn-primary btn-fullwidth" data-i18n="login.signin">Sign In</button>
+    </form>
+
+    <div class="divider">OR CONTINUE WITH</div>
+    <div class="social-buttons">
+      <button class="social-btn" onclick="alert('Google sign-in: Demo only')"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h5.9c-.3 1.4-1 2.5-2.2 3.3v2.8h3.6c2.1-1.9 3.2-4.8 3.2-8.3z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.8c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.9C4.1 20.6 7.7 23 12 23z"/><path fill="#FBBC05" d="M6 14.3C5.7 13.6 5.6 12.8 5.6 12s.1-1.6.4-2.3V6.7H2.3C1.5 8.3 1 10.1 1 12s.5 3.7 1.3 5.3L6 14.3z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3 .6 4.1 1.6l3.2-3.2C17.5 2 14.9 1 12 1 7.7 1 4.1 3.4 2.3 6.7L6 9.7c.9-2.6 3.2-4.3 6-4.3z"/></svg>Google</button>
+      <button class="social-btn" onclick="alert('Microsoft sign-in: Demo only')"><svg width="16" height="16" viewBox="0 0 24 24"><path fill="#f25022" d="M1 1h10v10H1z"/><path fill="#7fba00" d="M13 1h10v10H13z"/><path fill="#00a4ef" d="M1 13h10v10H1z"/><path fill="#ffb900" d="M13 13h10v10H13z"/></svg>Microsoft</button>
+    </div>
+
+    <div class="signup-link">
+      <span data-i18n="login.no_account">Don't have an account?</span> <a href="#" onclick="alert('Contact info@pixoustech.com to set up your client portal.');return false;" data-i18n="login.signup">Sign Up</a>
+    </div>
+  </div>
+</div>
+
+<script>
+function submitLogin(e){
+  e.preventDefault();
+  const f = e.target;
+  const email = f.email.value, pw = f.password.value;
+  const alertBox = document.getElementById('alert');
+  // Demo credentials
+  if(email === 'customer@pixoustech.com' && pw === 'demo123'){
+    alertBox.innerHTML='<div class="alert alert-success">✓ Sign-in successful! Redirecting to your dashboard...</div>';
+    setTimeout(()=>{ window.location.href = 'index.html'; }, 1200);
+  } else {
+    alertBox.innerHTML='<div class="alert alert-error">⚠ Invalid credentials. Try demo: customer@pixoustech.com / demo123</div>';
+  }
+  return false;
+}
+</script>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

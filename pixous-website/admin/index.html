@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Admin Panel — Pixous Technologies</title>
+<link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="admin-shell">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="admin-sidebar">
+    <div class="admin-brand">
+      <div class="row">
+        <img src="../images/logo.jpg" alt="Pixous">
+        <div><span class="b1">PIXOUS</span><span class="b2">TECHNOLOGIES</span></div>
+      </div>
+      <div class="role">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Admin Panel
+      </div>
+    </div>
+
+    <nav class="admin-nav">
+      <div class="admin-nav-title">Overview</div>
+      <a href="#" class="active" data-tab="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+
+      <div class="admin-nav-title">Content</div>
+      <a href="#" data-tab="hero">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Hero Highlights
+      </a>
+      <a href="#" data-tab="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Services
+      </a>
+      <a href="#" data-tab="testimonials">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        Testimonials
+      </a>
+      <a href="#" data-tab="company">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+        Company Info
+      </a>
+
+      <div class="admin-nav-title">Site</div>
+      <a href="../index.html" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        View Live Site
+      </a>
+      <a href="#" data-tab="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Settings
+      </a>
+    </nav>
+
+    <div class="admin-sidebar-footer">
+      <a href="#" onclick="logout();return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+        Sign Out
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="admin-main">
+
+    <header class="admin-topbar">
+      <div class="admin-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search content, sections, settings...">
+      </div>
+      <div class="admin-topbar-actions">
+        <button class="topbar-btn" title="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="dot"></span></button>
+        <button class="topbar-btn" onclick="window.open('../index.html','_blank')" title="View Site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>
+        <div class="user-chip"><div class="av">A</div><span>Admin</span></div>
+      </div>
+    </header>
+
+    <div class="admin-content">
+
+      <!-- ===== DASHBOARD (default) ===== -->
+      <div class="tab-panel active" id="panel-dashboard">
+        <div class="page-header">
+          <h1>Welcome back, Admin 👋</h1>
+          <p>Manage your Pixous Technologies website content and settings.</p>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <span class="label">Hero Slides</span>
+            <div class="value" id="stat-slides">5</div>
+            <div class="delta">↗ Auto-rotating every 2s</div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div>
+          </div>
+          <div class="stat-card">
+            <span class="label">Services</span>
+            <div class="value" id="stat-services">7</div>
+            <div class="delta">↗ Live on /services.html</div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          </div>
+          <div class="stat-card">
+            <span class="label">Testimonials</span>
+            <div class="value" id="stat-testimonials">3</div>
+            <div class="delta">↗ Active on home</div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+          </div>
+          <div class="stat-card">
+            <span class="label">Languages</span>
+            <div class="value">7</div>
+            <div class="delta">↗ EN · TA · HI · TE · ML · KN · FR</div>
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Quick Actions</h2>
+              <p>Jump into the most-used editing sections.</p>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+            <a href="#" data-tab="hero" class="edit-card" style="text-decoration:none;cursor:pointer;display:block">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+                <div style="width:40px;height:40px;border-radius:10px;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="21 15 16 10 5 21"/></svg></div>
+                <strong style="font-family:var(--font-brand);color:var(--pix-navy);font-size:14.5px">Edit Hero Highlights</strong>
+              </div>
+              <p style="color:var(--pix-grey-3);font-size:13px;margin:0">Update the auto-sliding banners on your homepage.</p>
+            </a>
+            <a href="#" data-tab="services" class="edit-card" style="text-decoration:none;cursor:pointer;display:block">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+                <div style="width:40px;height:40px;border-radius:10px;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <strong style="font-family:var(--font-brand);color:var(--pix-navy);font-size:14.5px">Manage Services</strong>
+              </div>
+              <p style="color:var(--pix-grey-3);font-size:13px;margin:0">Add, edit, or remove services shown on the homepage.</p>
+            </a>
+            <a href="#" data-tab="testimonials" class="edit-card" style="text-decoration:none;cursor:pointer;display:block">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+                <div style="width:40px;height:40px;border-radius:10px;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+                <strong style="font-family:var(--font-brand);color:var(--pix-navy);font-size:14.5px">Edit Testimonials</strong>
+              </div>
+              <p style="color:var(--pix-grey-3);font-size:13px;margin:0">Add new client testimonials or update existing ones.</p>
+            </a>
+            <a href="#" data-tab="company" class="edit-card" style="text-decoration:none;cursor:pointer;display:block">
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+                <div style="width:40px;height:40px;border-radius:10px;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/></svg></div>
+                <strong style="font-family:var(--font-brand);color:var(--pix-navy);font-size:14.5px">Update Contact Info</strong>
+              </div>
+              <p style="color:var(--pix-grey-3);font-size:13px;margin:0">Phone, email, address, and office hours across the site.</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <div>
+              <h2>Recent Activity</h2>
+              <p>Latest content changes on your website.</p>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--pix-grey-1)">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+              <div style="flex:1"><div style="font-family:var(--font-brand);font-weight:600;color:var(--pix-navy);font-size:14px">Hero highlights system initialized</div><div style="color:var(--pix-grey-3);font-size:12px;margin-top:2px">5 highlights ready to rotate every 2 seconds</div></div>
+              <span style="color:var(--pix-grey-3);font-size:12px">just now</span>
+            </div>
+            <div style="display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--pix-grey-1)">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+              <div style="flex:1"><div style="font-family:var(--font-brand);font-weight:600;color:var(--pix-navy);font-size:14px">Multilingual support enabled</div><div style="color:var(--pix-grey-3);font-size:12px;margin-top:2px">7 languages active site-wide</div></div>
+              <span style="color:var(--pix-grey-3);font-size:12px">just now</span>
+            </div>
+            <div style="display:flex;gap:14px;padding:14px 0">
+              <div style="width:36px;height:36px;border-radius:50%;background:var(--pix-green-soft);color:var(--pix-green);display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <div style="flex:1"><div style="font-family:var(--font-brand);font-weight:600;color:var(--pix-navy);font-size:14px">Pixie chatbot deployed</div><div style="color:var(--pix-grey-3);font-size:12px;margin-top:2px">Active across all pages with multilingual responses</div></div>
+              <span style="color:var(--pix-grey-3);font-size:12px">just now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== HERO HIGHLIGHTS ===== -->
+      <div class="tab-panel" id="panel-hero">
+        <div class="page-header">
+          <h1>Hero Highlights</h1>
+          <p>Edit the auto-sliding highlights shown on your homepage. They rotate every 2 seconds.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <div><h2>Slides</h2><p>Reorder, edit, or delete highlights. Changes apply to your live homepage instantly.</p></div>
+            <div style="display:flex;gap:8px">
+              <button class="btn-add" onclick="addSlide()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Highlight</button>
+              <button class="btn-save" onclick="saveHeroSlides()">Save Changes</button>
+            </div>
+          </div>
+          <div class="editable-list" id="heroSlidesList"></div>
+        </div>
+      </div>
+
+      <!-- ===== SERVICES ===== -->
+      <div class="tab-panel" id="panel-services">
+        <div class="page-header">
+          <h1>Services</h1>
+          <p>Manage the services shown on your homepage cards. Full service details live on /services.html.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <div><h2>Service Cards</h2><p>Visible in the homepage services preview section.</p></div>
+            <div style="display:flex;gap:8px">
+              <button class="btn-add" onclick="addService()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Service</button>
+            </div>
+          </div>
+          <div class="editable-list" id="servicesList"></div>
+        </div>
+      </div>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <div class="tab-panel" id="panel-testimonials">
+        <div class="page-header">
+          <h1>Testimonials</h1>
+          <p>Manage client testimonials shown on your homepage.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <div><h2>Client Testimonials</h2><p>Currently 3 testimonials visible on the homepage.</p></div>
+            <button class="btn-add" onclick="addTestimonial()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>Add Testimonial</button>
+          </div>
+          <div class="editable-list" id="testimonialsList"></div>
+        </div>
+      </div>
+
+      <!-- ===== COMPANY INFO ===== -->
+      <div class="tab-panel" id="panel-company">
+        <div class="page-header">
+          <h1>Company Information</h1>
+          <p>Update contact details that appear in the footer and contact pages across your site.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <div><h2>Contact Details</h2><p>These appear in the footer of every page.</p></div>
+            <button class="btn-save" onclick="saveCompanyInfo()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Save Changes</button>
+          </div>
+          <div class="form-grid">
+            <div class="fld"><label>Phone Number</label><input type="text" id="ci_phone" placeholder="+91 70940 47000"></div>
+            <div class="fld"><label>Email Address</label><input type="email" id="ci_email" placeholder="info@pixoustech.com"></div>
+          </div>
+          <div class="fld"><label>Office Hours</label><input type="text" id="ci_hours" placeholder="8:00 AM – 6:00 PM"></div>
+          <div class="fld"><label>Main Office Address</label><textarea id="ci_address" rows="3"></textarea></div>
+          <div class="fld"><label>Registered Office Address</label><textarea id="ci_regd_address" rows="3"></textarea></div>
+          <div class="fld"><label>Footer Tagline</label><textarea id="ci_tagline" rows="3"></textarea></div>
+        </div>
+      </div>
+
+      <!-- ===== SETTINGS ===== -->
+      <div class="tab-panel" id="panel-settings">
+        <div class="page-header">
+          <h1>Settings</h1>
+          <p>System-wide settings and account management.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header"><div><h2>Account Security</h2><p>Manage your admin credentials.</p></div></div>
+          <div class="form-grid">
+            <div class="fld"><label>Username</label><input type="text" value="admin" readonly></div>
+            <div class="fld"><label>New Password</label><input type="password" placeholder="Leave blank to keep current"></div>
+          </div>
+          <button class="btn-save" onclick="showToast('Password updated (demo only)')">Update Password</button>
+        </div>
+        <div class="panel">
+          <div class="panel-header"><div><h2 style="color:#cf3a3a">Danger Zone</h2><p>Irreversible actions — proceed with care.</p></div></div>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;padding:18px;background:#fef0f0;border-radius:10px;border:1px dashed #fbd5d5">
+            <div style="flex:1;min-width:240px"><strong style="font-family:var(--font-brand);color:#cf3a3a;font-size:14px">Reset all customizations</strong><p style="color:#cf3a3a;font-size:12.5px;margin-top:3px">Restores defaults for hero, services, testimonials, and company info.</p></div>
+            <button onclick="resetAll()" style="padding:10px 22px;background:#cf3a3a;color:#fff;border-radius:8px;font-family:var(--font-brand);font-weight:600;font-size:13px;cursor:pointer">Reset to Defaults</button>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-header"><div><h2>About</h2><p>Pixous Admin Panel — Powered by your in-house team.</p></div></div>
+          <p style="color:var(--pix-grey-3);font-size:13.5px;line-height:1.7">This admin panel uses browser localStorage to persist your customizations. For production deployments, connect this to your backend API by replacing the <code style="background:var(--pix-cream);padding:2px 6px;border-radius:4px;font-size:12px">loadData()</code> and <code style="background:var(--pix-cream);padding:2px 6px;border-radius:4px;font-size:12px">saveData()</code> functions in <code style="background:var(--pix-cream);padding:2px 6px;border-radius:4px;font-size:12px">admin.js</code> with API calls.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="admin.js"></script>
+<script>
+// Update dashboard stats
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('stat-slides').textContent = (JSON.parse(localStorage.getItem('pix_hero_slides')||'null') || DEFAULTS.hero_slides).length;
+  document.getElementById('stat-services').textContent = (JSON.parse(localStorage.getItem('pix_services')||'null') || DEFAULTS.services).length;
+  document.getElementById('stat-testimonials').textContent = (JSON.parse(localStorage.getItem('pix_testimonials')||'null') || DEFAULTS.testimonials).length;
+});
+</script>
+</body>
+</html>

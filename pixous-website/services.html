@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Services — Pixous Technologies</title>
+<meta name="description" content="Explore Pixous Technologies' core services: strategic planning, optimization, project implementation, digital transformation, IT consulting, and more.">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chatbot.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-bar">
+    <a href="index.html" class="brand">
+      <img src="images/logo.jpg" alt="Pixous">
+      <div class="brand-text"><span class="b1">PIXOUS</span><span class="b2">TECHNOLOGIES</span></div>
+    </a>
+    <nav class="nav-menu">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about.html" data-i18n="nav.about">About</a>
+      <a href="services.html" class="active" data-i18n="nav.services">Services</a>
+      <a href="facilities.html" data-i18n="nav.facilities">Facilities</a>
+      <a href="products.html" data-i18n="nav.products">Products</a>
+      <a href="pmc.html" data-i18n="nav.pmc">PMC</a>
+      <a href="careers.html" data-i18n="nav.careers">Careers</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button class="lang-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><span class="lang-current">EN</span></button>
+        <div class="lang-dropdown"></div>
+      </div>
+      <a href="login.html" class="btn btn-outline" style="padding:10px 20px;font-size:13px" data-i18n="nav.login">Login</a>
+      <button class="mobile-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html" data-i18n="nav.home">Home</a><span class="sep">›</span><span data-i18n="nav.services">Services</span></div>
+    <h1 data-i18n="nav.services">Our Services</h1>
+    <p class="lead">Multi-expertise consulting and technology services helping enterprises grow, transform, and lead.</p>
+  </div>
+</section>
+
+<!-- ===== SERVICE LISTING (clickable list + detail panel) ===== -->
+<section class="section">
+  <div class="container">
+    <div class="service-listing">
+
+      <!-- LEFT: clickable list -->
+      <aside class="service-list" id="serviceList">
+        <button class="service-list-item active" data-service="strategic">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div><div class="sli-title">Strategic Planning</div><div class="sli-meta">01 · Assessment</div></div>
+        </button>
+        <button class="service-list-item" data-service="optimization">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <div><div class="sli-title">Optimization Services</div><div class="sli-meta">02 · Remediation</div></div>
+        </button>
+        <button class="service-list-item" data-service="implementation">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+          <div><div class="sli-title">Project Implementation</div><div class="sli-meta">03 · Delivery</div></div>
+        </button>
+        <button class="service-list-item" data-service="digital">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg></div>
+          <div><div class="sli-title">Digital Transformation</div><div class="sli-meta">04 · Modernization</div></div>
+        </button>
+        <button class="service-list-item" data-service="consulting">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4"/><path d="M15 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2h-4"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+          <div><div class="sli-title">IT Consulting</div><div class="sli-meta">05 · Advisory</div></div>
+        </button>
+        <button class="service-list-item" data-service="insight">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div><div class="sli-title">Customer Insight</div><div class="sli-meta">06 · Analytics</div></div>
+        </button>
+        <button class="service-list-item" data-service="marketing">
+          <div class="sli-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg></div>
+          <div><div class="sli-title">Marketing & Sales</div><div class="sli-meta">07 · Growth</div></div>
+        </button>
+      </aside>
+
+      <!-- RIGHT: detail panel with photo + demo button -->
+      <div class="service-detail" id="serviceDetail">
+        <!-- Filled dynamically -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA STRIP ===== -->
+<section class="cta-strip">
+  <div class="container">
+    <h2 data-i18n="cta.title">Do You Have a Project?</h2>
+    <p data-i18n="cta.subtitle">Let's talk about business solutions that scale with your vision.</p>
+    <a href="contact.html" class="btn btn-primary" data-i18n="btn.contact_us">Contact Us</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Pixous">
+          <div class="footer-brand-text"><span class="b1">PIXOUS</span><span class="b2">TECHNOLOGIES</span></div>
+        </div>
+        <p class="footer-tagline" data-i18n="footer.tagline">Pixous Technologies is a customer-centric company delivering strategic thinking and doable approaches for projects across industries.</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="facilities.html" data-i18n="nav.facilities">Facilities</a></li>
+          <li><a href="products.html" data-i18n="nav.products">Products</a></li>
+          <li><a href="pmc.html" data-i18n="nav.pmc">PMC</a></li>
+          <li><a href="careers.html" data-i18n="nav.careers">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.services_title">Our Services</h4>
+        <ul>
+          <li><a href="services.html">Strategic Planning</a></li>
+          <li><a href="services.html">Optimization Services</a></li>
+          <li><a href="services.html">Project Implementation</a></li>
+          <li><a href="services.html">Digital Transformation</a></li>
+          <li><a href="services.html">IT Consulting</a></li>
+          <li><a href="services.html">Marketing & Sales</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer.contact_title">Get in Touch</h4>
+        <div class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><div><strong>Phone</strong><a href="tel:+917094047000" data-admin="phone">+91 70940 47000</a></div></div>
+        <div class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><div><strong>Email</strong><a href="mailto:info@pixoustech.com" data-admin="email">info@pixoustech.com</a></div></div>
+        <div class="footer-contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong data-i18n="footer.office">Office</strong><span data-admin="address">AV IT Park, S.F.No: 360/4 & 360/5, Keeranatham Road, Saravanampatti, Coimbatore – 641 035, Tamil Nadu, India</span></div></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copyright">© 2026 Pixous Technologies Pvt Ltd. All Rights Reserved.</span>
+      <span><a href="admin/login.html">Admin Panel</a> · <a href="employee-login.html">Employee Login</a></span>
+    </div>
+  </div>
+</footer>
+
+<!-- Service data + interactivity -->
+<script>
+const SERVICES_DATA = {
+  strategic: {
+    tag: 'STRATEGIC PLANNING',
+    title: 'Strategic Planning & Assessment',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+    desc: 'Build a roadmap that turns ambition into action. Our strategic planning services combine deep industry insight with rigorous business analysis to help you assess opportunities, define direction, and align your organization for sustainable growth.',
+    features: ['Business assessment & SWOT analysis','Roadmap & vision setting','Stakeholder alignment workshops','KPI & performance metrics','Risk identification','Quarterly review framework']
+  },
+  optimization: {
+    tag: 'OPTIMIZATION',
+    title: 'Optimization & Remediation Services',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>',
+    desc: 'Streamline operations, eliminate waste, and remediate inefficiencies. We diagnose process bottlenecks, optimize workflows, and rebuild systems for measurable performance gains across your organization.',
+    features: ['Process mapping & analysis','Workflow re-engineering','Cost reduction initiatives','Legacy system remediation','Automation opportunities','Continuous improvement cycles']
+  },
+  implementation: {
+    tag: 'IMPLEMENTATION',
+    title: 'Project Implementation Services',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>',
+    desc: 'From kickoff to go-live, we deliver. Our seasoned project teams bring proven methodologies, dedicated resources, and uncompromising quality to every implementation — on time and on budget.',
+    features: ['Agile/Waterfall delivery models','Dedicated project teams','Quality assurance built-in','On-time, on-budget guarantee','Post-go-live support','Knowledge transfer & training']
+  },
+  digital: {
+    tag: 'DIGITAL TRANSFORMATION',
+    title: 'Digital Transformation Excellence',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/></svg>',
+    desc: 'Reimagine your business for the digital age. We architect and deliver end-to-end digital transformation programs — from cloud migration to AI-driven decision-making — that future-proof your enterprise.',
+    features: ['Cloud-native architecture','AI & ML integration','Process digitization','Data analytics platforms','Mobile & web modernization','Change management']
+  },
+  consulting: {
+    tag: 'CONSULTING',
+    title: 'IT Consulting & Services',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11H5a2 2 0 0 0-2 2v3c0 1.1.9 2 2 2h4"/><path d="M15 11h4a2 2 0 0 1 2 2v3c0 1.1-.9 2-2 2h-4"/><line x1="9" y1="15" x2="15" y2="15"/></svg>',
+    desc: 'World-class consultants partnering with you on technology strategy, architecture design, and complex problem-solving. Get senior-level expertise without the senior-level overhead.',
+    features: ['Technology roadmap design','Architecture review','Vendor selection support','Cost-benefit analysis','Compliance & security advisory','24/7 expert support']
+  },
+  insight: {
+    tag: 'CUSTOMER INSIGHT',
+    title: 'Customer Insight & Analytics',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+    desc: 'Turn raw data into a competitive advantage. We design insight programs that uncover what your customers actually want — and give you the dashboards, models, and tools to act on it.',
+    features: ['Customer segmentation models','Voice-of-customer programs','Behavioral analytics','Predictive modeling','Real-time dashboards','Loyalty & retention design']
+  },
+  marketing: {
+    tag: 'MARKETING & SALES',
+    title: 'Marketing & Sales Enablement',
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>',
+    desc: 'Drive measurable revenue growth with marketing strategies built on insight, executed with precision, and tracked end-to-end. From brand to pipeline to closed-won — we cover the whole journey.',
+    features: ['Go-to-market strategy','Lead generation campaigns','Sales enablement playbooks','Brand & content strategy','Marketing automation','Sales analytics & forecasting']
+  }
+};
+
+function renderService(key) {
+  const s = SERVICES_DATA[key]; if (!s) return;
+  const detail = document.getElementById('serviceDetail');
+  detail.innerHTML = `
+    <div class="service-detail-image">
+      <div class="big-icon">${s.icon}</div>
+      <span class="img-tag">${s.tag}</span>
+    </div>
+    <div class="service-detail-body">
+      <h2>${s.title}</h2>
+      <p class="sd-desc">${s.desc}</p>
+      <div class="sd-features">
+        ${s.features.map(f => `
+          <div class="sd-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>${f}</span>
+          </div>`).join('')}
+      </div>
+      <div class="sd-cta">
+        <button class="btn btn-primary" onclick="alert('Demo request received! Our team will reach out within 24 hours.')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <span data-i18n="btn.view_demo">View Demo</span>
+        </button>
+        <a href="contact.html" class="btn btn-outline" data-i18n="btn.contact_us">Contact Us</a>
+      </div>
+    </div>`;
+}
+
+document.querySelectorAll('#serviceList .service-list-item').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('#serviceList .service-list-item').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderService(btn.dataset.service);
+  });
+});
+renderService('strategic');
+</script>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

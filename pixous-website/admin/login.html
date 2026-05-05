@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Admin Login — Pixous Technologies</title>
+<link rel="icon" type="image/jpeg" href="../images/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.admin-login{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--pix-navy) 0%,#0a1f33 100%);padding:24px;position:relative;overflow:hidden}
+.admin-login::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background-image:radial-gradient(circle,var(--pix-green-3) 2.5px,transparent 3px);background-size:24px 24px;opacity:.18;border-radius:50%}
+.admin-login::after{content:'';position:absolute;bottom:-150px;left:-150px;width:400px;height:400px;background-image:radial-gradient(circle,#fff 1.5px,transparent 2px);background-size:20px 20px;opacity:.08;border-radius:50%}
+.admin-card{background:#fff;border-radius:18px;padding:48px 44px;width:100%;max-width:440px;box-shadow:0 30px 60px rgba(0,0,0,.4);position:relative;z-index:2}
+.admin-card .brand-row{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.admin-card .brand-row img{height:42px}
+.admin-card .brand-row .brand-text .b1{font-family:var(--font-brand);font-weight:900;font-size:18px;color:var(--pix-navy);letter-spacing:.5px}
+.admin-card .brand-row .brand-text .b2{font-family:var(--font-brand);font-weight:500;font-size:10px;color:var(--pix-green);letter-spacing:3px;display:block;margin-top:2px}
+.admin-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;background:linear-gradient(135deg,var(--pix-navy),var(--pix-green));color:#fff;border-radius:30px;font-family:var(--font-brand);font-weight:600;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:18px}
+.admin-card h1{font-family:var(--font-brand);font-weight:800;font-size:28px;color:var(--pix-navy);margin-bottom:8px;letter-spacing:-.5px}
+.admin-card .subtitle{color:var(--pix-grey-3);font-size:14.5px;margin-bottom:30px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-family:var(--font-brand);font-weight:600;font-size:13px;color:var(--pix-navy);margin-bottom:7px}
+.form-group input{width:100%;padding:13px 16px;border:1.5px solid var(--pix-grey-1);border-radius:var(--radius-sm);font-family:inherit;font-size:14px;outline:none;transition:all .2s;background:var(--pix-cream)}
+.form-group input:focus{border-color:var(--pix-green);background:#fff;box-shadow:0 0 0 3px rgba(46,125,79,.1)}
+.form-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;font-size:13px}
+.form-row label{display:flex;align-items:center;gap:7px;cursor:pointer;color:var(--pix-grey-3)}
+.form-row a{color:var(--pix-green);font-weight:600}
+.btn-fullwidth{width:100%;justify-content:center;padding:13px}
+.alert{padding:11px 14px;border-radius:var(--radius-sm);font-size:13px;margin-bottom:14px}
+.alert-success{background:var(--pix-green-soft);color:var(--pix-green)}
+.alert-error{background:#fef0f0;color:#cf3a3a}
+.demo-creds{background:var(--pix-cream);border:1px dashed var(--pix-grey-2);padding:12px;border-radius:var(--radius-sm);font-size:12px;color:var(--pix-grey-3);margin-top:18px;text-align:center}
+.demo-creds code{background:#fff;padding:2px 6px;border-radius:4px;font-family:'SF Mono',monospace;color:var(--pix-navy);font-weight:600}
+.back-link{position:absolute;top:24px;left:24px;color:rgba(255,255,255,.7);font-family:var(--font-brand);font-weight:600;font-size:13px;display:flex;align-items:center;gap:6px;padding:8px 14px;border-radius:6px;transition:all .2s;z-index:3}
+.back-link:hover{background:rgba(255,255,255,.1);color:#fff}
+.tabs{display:flex;gap:6px;margin-bottom:24px;background:var(--pix-grey-1);padding:5px;border-radius:10px}
+.tab{flex:1;padding:9px 12px;border-radius:7px;font-family:var(--font-brand);font-weight:600;font-size:12px;color:var(--pix-grey-3);text-align:center;cursor:pointer;transition:all .25s}
+.tab.active{background:#fff;color:var(--pix-navy);box-shadow:0 2px 6px rgba(14,42,71,.06)}
+</style>
+</head>
+<body>
+<a href="../index.html" class="back-link"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>Back to website</a>
+<div class="admin-login">
+  <div class="admin-card">
+    <div class="brand-row">
+      <img src="../images/logo.jpg" alt="Pixous">
+      <div class="brand-text"><span class="b1">PIXOUS</span><span class="b2">TECHNOLOGIES</span></div>
+    </div>
+    <span class="admin-badge">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      ADMIN ACCESS
+    </span>
+    <div class="tabs">
+      <a href="../login.html" class="tab" style="text-decoration:none">Customer</a>
+      <a href="../employee-login.html" class="tab" style="text-decoration:none">Employee</a>
+      <a href="login.html" class="tab active" style="text-decoration:none">Admin</a>
+    </div>
+    <h1>Admin Sign In</h1>
+    <p class="subtitle">Secure portal for managing the Pixous website.</p>
+
+    <div id="alert"></div>
+    <form onsubmit="return adminLogin(event)">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="admin" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="••••••••" required>
+      </div>
+      <div class="form-row">
+        <label><input type="checkbox"> Remember this device</label>
+        <a href="#">Need help?</a>
+      </div>
+      <button type="submit" class="btn btn-primary btn-fullwidth">Sign In to Admin Panel</button>
+    </form>
+
+    <div class="demo-creds">
+      <strong>Demo credentials:</strong><br>
+      Username: <code>admin</code> &nbsp;·&nbsp; Password: <code>admin123</code>
+    </div>
+  </div>
+</div>
+<script>
+function adminLogin(e){
+  e.preventDefault();
+  const u = e.target.username.value, p = e.target.password.value;
+  const a = document.getElementById('alert');
+  if(u === 'admin' && p === 'admin123'){
+    sessionStorage.setItem('pix_admin_auth','1');
+    a.innerHTML = '<div class="alert alert-success">✓ Authenticated — loading admin panel...</div>';
+    setTimeout(()=>{ window.location.href = 'index.html'; }, 800);
+  } else {
+    a.innerHTML = '<div class="alert alert-error">⚠ Invalid credentials. Use admin / admin123 (demo).</div>';
+  }
+  return false;
+}
+</script>
+</body>
+</html>
